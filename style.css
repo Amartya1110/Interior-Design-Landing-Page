@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+html{
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    border: 0;
+    box-sizing: inherit;
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+}
+
+.home-page {
+    background-image: url("./assets/background-small.jpg");
+    background-color: #707094;
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px;
+}
+
+
+/* =========== Nav Bar ============= */
+.nav-bar {
+    height: 120px;
+}
+
+.nav-bar>nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.underline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70vw;
+    position: relative;
+}
+
+.underline::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 70vw;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+}
+
+.nav-items {
+    /* we need to mention the padding explicitly because 
+    by default the ul elements are having "padding-inline-start: 40px;"
+    To override the above padding we need to explicitly mention the padding */
+    padding: 0;
+    width: 500px;
+    list-style: none;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.contact-logo>svg {
+    height: 30px;
+    margin-right: 10px;
+}
+
+.contact-info h3 {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+/* =========== Page Details ============ */
+.page-details {
+    height: calc(100vh - 220px);
+    display: flex;
+    justify-content: space-around;
+}
+
+.details-text {
+    width: 600px;
+    font-size: 50px;
+    margin: 100px 0px;
+}
+
+.learn-more {
+    font-size: 20px;
+    background-color: transparent;
+    padding: 10px 30px;
+    border: 2px solid #fff;
+    border-radius: 30px;
+}
+
+.features {
+    position: relative;
+}
+
+.feature {
+    width: 300px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.feature-square {
+    padding: 30px;
+}
+
+.feature-logo>img {
+    background-color: #fff;
+    padding: 5px 20px;
+    border-radius: 22.2px; 
+}
+
+.feature-1 {
+    margin: 30px 0px 100px;
+    position: relative;
+}
+
+.feature-2 {
+    position: absolute;
+    left: -250px;
+}
+
+.figure {
+    display: flex;
+    align-items: center;
+}
+
+.line {
+    height: 2px;
+    width: 70px;
+    background-color: #fff;
+}
+
+.circle {
+    height:20px;
+    width:20px;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.figure-1 {
+    transform: rotate(90deg);
+    position: absolute;
+    bottom: -55px;
+    right: 30px;
+}
+
+.figure-2 {
+    position: absolute;
+    top: 30px;
+    right: -90px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
