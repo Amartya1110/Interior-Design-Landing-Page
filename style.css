@@ -12,39 +12,90 @@ html{
     color: #fff;
 }
 
+/* ======================================================= */
+/* ========== Home Page ========== */
+/* ======================================================= */
+
 .home-page {
     background-image: url("./assets/background-small.jpg");
     background-color: #707094;
     background-blend-mode: multiply;
     background-repeat: no-repeat;
+    background-position: 10%;
     background-size: cover;
-    padding: 50px;
+    padding: 2em 1em;
+    min-height: 100vh;
+}
+@media screen and (min-width: 720px) {
+    .home-page {
+        padding: 4em;
+    }
 }
 
 
 /* =========== Nav Bar ============= */
+
 .nav-bar {
-    height: 120px;
+    min-height: 120px;
+    position: relative;
+}
+
+.ham-menu {
+    width: 2.5em;
+    position: absolute;
+    /* top: 2rem; */
+    right: 1rem;
+}
+
+@media screen and (min-width: 1024px) {
+    .ham-menu {
+        display: none;
+    }
+}
+
+.menu-bar {
+    height: 0.3em;
+    background-color: #fff;
+    margin: 0.3em;
 }
 
 .nav-bar>nav {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
 }
 
 .underline {
-    display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    width: 70vw;
+    /* width: 70vw; */
     position: relative;
+}
+
+.hide {
+    display: none;
+}
+
+.reveal {
+    display: flex;
+}
+
+@media screen and (min-width: 1024px) {
+    .nav-bar>nav {
+        flex-direction: row;
+    }
+    .underline {
+        display: flex;
+        flex-direction: row;
+    }
 }
 
 .underline::after {
     content: "";
     display: block;
     height: 2px;
-    width: 70vw;
+    width: 100%;
     background-color: #fff;
     position: absolute;
     bottom: 0;
@@ -54,18 +105,27 @@ html{
     /* we need to mention the padding explicitly because 
     by default the ul elements are having "padding-inline-start: 40px;"
     To override the above padding we need to explicitly mention the padding */
-    padding: 0;
+    padding: 1em 0em;
     width: 500px;
     list-style: none;
     font-weight: 600;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    margin-bottom: 50px;
+    align-items: center;
+    /* margin-bottom: 50px; */
+}
+
+@media screen and (min-width: 1024px) {
+    .nav-items {
+        flex-direction: row;
+    }
 }
 
 .contact-info {
     display: flex;
     align-items: center;
+    margin-left: 2em;
     margin-bottom: 50px;
 }
 
@@ -79,34 +139,55 @@ html{
     font-weight: 700;
 }
 
+
+
 /* =========== Page Details ============ */
 .page-details {
-    height: calc(100vh - 220px);
+    /* height: calc(100vh - 220px); */
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
 }
 
+@media screen and (min-width: 820px) {
+    .page-details {
+        flex-direction: row;
+    }
+}
+
 .details-text {
-    width: 600px;
-    font-size: 50px;
-    margin: 100px 0px;
+    /* width: 600px; */
+    /* font-size: 50px; */
+    font-size: 2rem;
+    max-width: 600px;
+    /* margin: 100px 0px; */
+    margin-bottom: 2em;
+}
+
+@media screen and (min-width: 820px) {
+    .details-text {
+        font-size: 3rem;
+        margin: 100px 0px;
+    }
 }
 
 .learn-more {
     font-size: 20px;
     background-color: transparent;
-    padding: 10px 30px;
+    padding: 0.66em 2em;
     border: 2px solid #fff;
     border-radius: 30px;
 }
 
 .features {
     position: relative;
+    min-height: 50%;
 }
 
 .feature {
     width: 300px;
     background-color: rgba(255, 255, 255, 0.2);
+    margin: 2em 0em;
 }
 
 .feature-square {
@@ -120,13 +201,15 @@ html{
 }
 
 .feature-1 {
-    margin: 30px 0px 100px;
+    /* margin: 30px 0px 100px; */
     position: relative;
 }
 
 .feature-2 {
-    position: absolute;
-    left: -250px;
+    /* position: absolute; */
+    position: relative;
+    /* left: -250px; */
+    margin: 2em;
 }
 
 .figure {
@@ -148,6 +231,7 @@ html{
 }
 
 .figure-1 {
+    display: none;
     transform: rotate(90deg);
     position: absolute;
     bottom: -55px;
@@ -155,36 +239,27 @@ html{
 }
 
 .figure-2 {
+    display: none;
     position: absolute;
     top: 30px;
     right: -90px;
 }
 
+@media screen and (min-width: 820px) {
+    .feature-1 {
+        left: 20%;
+    }
 
+    .feature-2 {
+        /* position: absolute; */
+        right: 30%;
+        bottom: -30%;
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    .figure-1, .figure-2 {
+        display: flex;
+    }
+}
 
 
 
